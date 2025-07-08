@@ -23,4 +23,24 @@ void main() {
         'nombre: $name, Edad: $age años, Altura: $height cm, ' +
         'Es empleado: $isEmployed, País: $country, Idioma: $language',
   );
+
+  // TODO: Ejemplo de variables dinámicas
+  dynamic dynamicVariable = 'This can be anything';
+  print('Variable dinámica: $dynamicVariable');
+  dynamicVariable = 42;
+  print('Variable dinámica actualizada: $dynamicVariable');
+  dynamicVariable = true;
+  print('Variable dinámica actualizada: $dynamicVariable');
+  dynamicVariable = [1, 2, 3, 4];
+  print('Variable dinámica actualizada: $dynamicVariable');
+
+  // TODO: Ejemplo de variables nulas
+  String? nullableVariable = null; // Variable que puede ser nula
+  print('Variable nula: $nullableVariable');
+  nullableVariable = 'Ahora tiene un valor';
+  print('Variable nula actualizada: $nullableVariable');
+  // Si intentamos asignar un valor nulo a una variable no anulable, Dart
+  // nos dará un error de compilación.
+  // String nonNullableVariable = null; // Esto causará un error de compilación
+  // Para permitir que una variable sea nula, debemos usar el operador ?.
 }

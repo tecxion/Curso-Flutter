@@ -28,6 +28,8 @@ https://marketplace.visualstudio.com/items?itemName=Android.VSAdk
 ### 6. Instalación de Flutter Tools para Android Studio
 https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 
+---
+## Codigo del curso.
 ### 7. Hello World - Mi primer programa
 [Hello world](Codigo/Readme.md#hello-world)
 
@@ -42,16 +44,7 @@ https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 
 
 
-
-
-
-
-
-
-
-
-
-
+---
 
 >[!NOTE]
 >Dejo dos archivos que son sacados de Fernando Herrera como guía básica de atajos para dart y flutter
