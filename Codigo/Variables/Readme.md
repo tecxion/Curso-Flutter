@@ -77,4 +77,4 @@ int? numero;
 int valor = numero!; // Asegura que numero no es null (puede lanzar una excepción si lo es)
 ```
 
-Podemos ver el ejemplo y descargar el código en [Variables](02_Variables.dart)
+Podemos ver el ejemplo y descargar el código en [Variables](02_variables.dart)
