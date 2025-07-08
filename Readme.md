@@ -7,32 +7,32 @@
 
 
 ### 1. Instalación de Flutter
-    https://flutter.dev/docs/get-started/install/windows
-    https://flutter.dev/docs/get-started/install/macos
-    https://flutter.dev/docs/get-started/install/linux
+https://flutter.dev/docs/get-started/install/windows
+https://flutter.dev/docs/get-started/install/macos
+https://flutter.dev/docs/get-started/install/linux
 
 ### 2. Instalación de Dart
-    https://dart.dev/get-dart
+https://dart.dev/get-dart
 
 ### 3. Instalación de Visual Studio Code
-    https://code.visualstudio.com/downloads
-    https://marketplace.visualstudio.com/items?itemName=dart-code.dart-code
+https://code.visualstudio.com/downloads
+https://marketplace.visualstudio.com/items?itemName=dart-code.dart-code
 
 ### 4. Instalación de Flutter Tools para Visual Studio Code
-    https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 
 ### 5. Instalación de Android Studio
-    https://developer.android.com/studio/index.html
-    https://marketplace.visualstudio.com/items?itemName=Android.VSAdk
+https://developer.android.com/studio/index.html
+https://marketplace.visualstudio.com/items?itemName=Android.VSAdk
 
 ### 6. Instalación de Flutter Tools para Android Studio
-    https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 
 ### 7. Hello World - Mi primer programa
-    [Hello world](Codigo/Readme.md#hello-world)
+[Hello world](Codigo/Readme.md#hello-world)
 
 ### 8. Variables
-    [Variables](Codigo/Variables/Readme.md)
+[Variables](Codigo/Variables/Readme.md)
 
 ### 9. Maps
 
