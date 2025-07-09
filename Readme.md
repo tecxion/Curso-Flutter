@@ -36,14 +36,19 @@ https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 ### 8. Variables
 [Variables](Codigo/Variables/Readme.md)
 
-### 9. Maps
+### 9. Operadores
+[Operadores](Codigo/Operadores/Readme.md)
+
+### 10. Maps
 [Maps](Codigo/Maps/Readme.md)
 
-### 10. Listas
+### 11. Listas
 [Listas](Codigo/list_iterables_sets/Readme.md)
 
-### 11. Funciones
+### 12. Funciones
 [Funciones](Codigo/Funciones/Readme.md)
+
+
 
 
 

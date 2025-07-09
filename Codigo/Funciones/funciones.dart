@@ -1,18 +1,26 @@
 void main() {
-  // * Funciones de ejemplo.
   // ! Función principal
+
+  // * Funciones de ejemplo.
+
   String nombre = 'Jose';
 
-  print(saludar());
+  print(saludar()); // * Llamada a la función saludar
 
-  print(saludarConNombre(nombre));
+  print(saludarConNombre(nombre)); // * Llamada a la función saludarConNombre
 
-  print(sumarDosNumeros(5, 10));
+  print(sumarDosNumeros(5, 10)); // * Llamada a la función sumarDosNumeros
 
-  print(sumar(3, 7));
+  print(sumar(3, 7)); // * Llamada a la función sumar
+
+  int a = 5;
+  print('Función con datos requeridos:');
+  print(
+    funcionConDatosRequeridos(a: a),
+  ); // * Llamada a la función funcionConDatosRequeridos con el parámetro requerido 'a'
 
   //
-  // EJERCICIO 1: Área de rectángulo
+  // EJERCICIO 1: Área de rectángulo, código al final.
   //
 
   int base = 5;
@@ -21,7 +29,7 @@ void main() {
   print('El área del rectángulo de base $base y altura $altura es: $area');
 
   //
-  // EJERCICIO 2: Mayor de dos números
+  // EJERCICIO 2: Mayor de dos números, código al final.
   //
   int num1 = 15;
   int num2 = 20;
@@ -46,6 +54,16 @@ int sumarDosNumeros(int a, int b) {
 }
 
 int sumar(int a, int b) => a + b;
+
+// ! Funcion con datos requeridos
+// ? En este caso, la función requiere que se le pase un valor para 'a' y tiene un valor por defecto para 'b'.
+// ? Si no se pasa un valor para 'b', se usará el valor por defecto de 3.
+// ? Si se pasa un valor para 'b', se usará ese valor en lugar del valor por defecto.
+// ? La palabra clave 'required' indica que el parámetro es obligatorio.
+
+int funcionConDatosRequeridos({required int a, int b = 3}) {
+  return a + b;
+}
 
 /* 
  ? ------------------------------------
