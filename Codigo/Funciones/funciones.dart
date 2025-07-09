@@ -1,5 +1,3 @@
-import 'dart:io';
-
 void main() {
   // * Funciones de ejemplo.
   // ! Función principal
