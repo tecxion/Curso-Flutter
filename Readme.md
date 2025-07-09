@@ -42,6 +42,9 @@ https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 ### 10. Listas
 [Listas](Codigo/list_iterables_sets/Readme.md)
 
+### 11. Funciones
+[Funciones](Codigo/Funciones/Readme.md)
+
 
 
 
