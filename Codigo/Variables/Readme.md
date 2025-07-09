@@ -78,3 +78,20 @@ int valor = numero!; // Asegura que numero no es null (puede lanzar una excepci�
 ```
 
 Podemos ver el ejemplo y descargar el código en [Variables](02_variables.dart)
+
+## Ejercicios de Variables.
+
+1. Calculadora de Edad
+Crea un programa en Dart que:
+- Declare una variable edad con tu edad actual.
+- Declare otra variable añosFuturos y asígnale un valor entero (por ejemplo, 10).
+- Calcule y muestre en la consola tu edad dentro de añosFuturos años.
+
+2. Conversión de Temperatura
+Crea un programa que:
+- Declare una variable temperaturaCelsius y asígnele un valor numérico.
+- Convierta esa temperatura a Fahrenheit usando la fórmula:
+- Fahrenheit = Celsius * 9/5 + 32 .
+- Muestre el resultado en la consola.
+
+Los ejercicios resueltos están en el código.

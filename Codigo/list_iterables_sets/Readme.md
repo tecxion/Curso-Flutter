@@ -84,6 +84,26 @@ nombredelista.add(valor);
 ## Ejemplos
 [Ejemplos](04_list_iterables_sets.dart)
 
+---
+## Ejercicios
+1. Gestión de Inventario
+Crea un programa que simule un sistema de inventario usando un Map. El mapa debe contener productos como claves y sus cantidades disponibles como valores:
+
+- Declara un Map<String, int> con algunos productos iniciales (por ejemplo: {"manzanas": 10, "plátanos": 20}).
+- Agrega un nuevo producto al inventario.
+- Actualiza la cantidad de un producto existente.
+- Elimina un producto del inventario.
+- Finalmente, muestra el inventario completo en la consola.
+
+
+2. Sistema de Calificaciones
+Crea un programa que utilice un Map para almacenar las calificaciones de varios estudiantes. Cada estudiante será una clave (nombre) y su calificación será el valor:
+
+- Declara un Map<String, double> con algunas calificaciones iniciales.
+- Calcula el promedio de las calificaciones.
+- Encuentra al estudiante con la calificación más alta.
+- Muestra el promedio y el nombre del estudiante con la mejor calificación.
+
 
 
 Consulta la [documentación oficial de Dart](https://dart.dev/guides/libraries/library-tour#collections) para más detalles.
