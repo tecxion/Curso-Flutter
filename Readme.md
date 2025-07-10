@@ -1,4 +1,4 @@
-# Aprende Flutter desde cero, paso a paso
+# Aprende Flutter desde cero, paso a paso :point_down:
 
 ## Primero os voy a dejar todos los enlaces de interés para que os sirvan como guía para el proceso de instalación de Flutter y Dart en Windows, MacOS y Linux.
 
@@ -29,7 +29,9 @@ https://marketplace.visualstudio.com/items?itemName=Android.VSAdk
 https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 
 ---
-## Codigo del curso.
+
+## Codigo del curso.:point_down:
+
 ### 7. Hello World - Mi primer programa
 [Hello world](Codigo/Readme.md#hello-world)
 
@@ -67,3 +69,9 @@ https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 #### Gran parte de la información obtenida ha sido gracias a Fernando Herrera de su canal de Youtube el cual podéis verlo para mejorar en el desarrollo de las aplicaciones con Flutter y Dart.
 
 :video_camera:[Canal de Fernando Herrera](https://www.youtube.com/@fernando_her85)
+
+---
+## Gracias por ver el curso y si os te ha gustado y quieres más repositorios así puedes invitarme a un café.
+
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/jfmpkiko) 
+[![Buymeacoffee](Media/cafe1.png)](https://coff.ee/tecxart)
