@@ -71,7 +71,7 @@ https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 :video_camera:[Canal de Fernando Herrera](https://www.youtube.com/@fernando_her85)
 
 ---
-## Gracias por ver el curso y si os te ha gustado y quieres más repositorios así puedes invitarme a un café.
+## Gracias por ver el curso y si te ha gustado y quieres más repositorios así puedes invitarme a un café.
 
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/jfmpkiko) 
 [![Butmeacoffee](https://github.com/tecxion/TecXion/blob/main/Media/cafe1.png)](https://coff.ee/tecxart)
