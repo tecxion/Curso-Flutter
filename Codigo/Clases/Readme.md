@@ -373,8 +373,7 @@ Evitar Herencia Múltiple : Dart no permite herencia múltiple directa, pero los
 Composición sobre Herencia : Los mixins promueven el principio de "composición sobre herencia", lo que hace que el código sea más modular y mantenible.
 
 ### 4. Ejemplo:
-En el siguiente ejemplo está implementado a relación de esta web donde explican el mixin [Visitar mixin](https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3){:target="_blank"}.
-<a href="https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3" target="_blank">Visitar mixin</a>
+En el siguiente ejemplo está implementado a relación de esta web donde explican el mixin [Visitar mixin](https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3).
 
 
 ```dart
