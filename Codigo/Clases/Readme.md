@@ -279,3 +279,208 @@ class Persona {
 }
 
 ```
+
+### Name Constructor.
+
+Cuando trabajemos con peticiones html y estemos haciendo clases podemos tener diversos problemas para llamar al constructor de la clase, para ello podemos usar el name constructor, en el que podemos pasarle los parametros que queramos y crear un objeto con los valores que queramos.
+- Ejemplo:
+
+
+```dart
+void main () {
+
+  // Creamos un objeto de la clase Heroe
+  Heroe heroe1 = Heroe(nombre: "Batman", poder: "Dinero", estaVivo: true);
+  print(heroe1); // Esto imprimirá por pantalla Batman tiene el poder de Dinero y esta vivo: si.
+
+  //Pero que pasa si tenemos esta invocación a la clase Heroe.
+  final Map<String, dynamic> rawJson = {
+    "nombre": "Superman",
+    "poder": "Volar",
+    "estaVivo": false
+  };
+
+  // Creamos un objeto de la clase Heroe con el name constructor.
+  Heroe heroe2 = Heroe.fromMap(rawJson);
+  print(heroe2); // Esto imprimirá por pantalla Superman tiene el poder de Volar y esta vivo: no.
+
+}
+
+class Heroe {
+
+  // Variables de la clase
+  String nombre;
+  String poder;
+  bool estaVivo;
+
+  // Constructor de la clase
+  Heroe({required this.nombre, required this.poder, required this.estaVivo});
+
+  //Para resolver el problema de llamar a la clase desde el Map podemos resolverlo de la siguiente manera, creando un constructor y el nombre del constructor.
+
+  Heroe.fromMap(Map<String, dynamic> rawJson){  //Heroe.fromMap es el nombre del constructor o Name Constructor.
+    // Esto es lo que hace el name constructor, se le pasa un Map y se le asignan los valores del Map a las variables de la clase.
+    this.nombre = rawJson['nombre'];
+    this.poder = rawJson['poder'];
+    this.estaVivo = rawJson['estaVivo'];
+  }
+
+
+  @Override
+  String toStrin(){
+    return '$nombre tiene el poder de $poder y esta vivo: ${ estaVivo ? 'si.' : 'no.'}';
+  }
+
+}
+
+```
+
+---
+
+## Mixin en Dart
+Los mixins son una característica poderosa de Dart que permite reutilizar código en múltiples clases sin usar herencia múltiple. Un mixin es una forma de compartir métodos y propiedades entre clases sin necesidad de crear una jerarquía de herencia compleja.
+
+### 1. ¿Qué son los Mixins?
+Un mixin es una clase que contiene métodos y propiedades que pueden ser "mezclados" (añadidos) a otras clases. A diferencia de la herencia tradicional, una clase puede usar varios mixins simultáneamente, lo que facilita la composición de comportamientos.
+
+En Dart, los mixins se definen como clases normales pero con la restricción de que no pueden tener constructores.
+
+### 2. Sintaxis Básica
+Para definir un mixin, se usa la palabra clave mixin:
+```dart
+mixin NombreMixin {
+  void metodoCompartido() {
+    print("Este método es compartido por varias clases.");
+  }
+}
+```
+- Para usar un mixin en una clase, se utiliza la palabra clave with
+
+```dart
+class MiClase with NombreMixin {
+  // La clase ahora tiene acceso a los métodos y propiedades del mixin
+}
+
+void main() {
+  MiClase objeto = MiClase();
+  objeto.metodoCompartido(); // Salida: Este método es compartido por varias clases.
+}
+```
+
+### 3. Ventajas de Usar Mixins
+Reutilización de Código : Los mixins permiten compartir funcionalidades comunes entre clases sin duplicar código.
+Evitar Herencia Múltiple : Dart no permite herencia múltiple directa, pero los mixins ofrecen una alternativa flexible.
+Composición sobre Herencia : Los mixins promueven el principio de "composición sobre herencia", lo que hace que el código sea más modular y mantenible.
+
+### 4. Ejemplo:
+En el siguiente ejemplo está implementado a relación de esta web donde explican el mixin [Visitar mixin](https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3){:target="_blank"}.
+
+
+```dart
+
+abstract class Animal {} // Clase abstracta principal, donde todos los animales heredan de esta clase.
+
+abstract class Mamifero extends Animal {} // Luego cada Animal puede estar dentro de una de estas clases.
+
+abstract class Ave extends Animal {}
+
+abstract class Pez extends Animal {}
+
+// Y cada animal puede tener un comportamiento diferente, por ejemplo:
+
+mixin Volador {
+  void volar() => print('estoy volando'); 
+}
+
+mixin Caminante {
+  void caminar() => print('estoy caminando');
+}
+
+mixin Nadador {
+  void nadar() => print('estoy nadando');
+}
+
+class Delfin extends Mamifero with Nadador {}
+
+class Murcielago extends Mamifero with Volador, Caminante {}
+
+class Gato extends Mamifero with Caminante {}
+
+class Pato extends Ave with Volador, Caminante, Nadador {}
+
+
+void main() {
+  final flipper = Delfin();
+  flipper.nadar();
+  
+  final batman = Murcielago();
+  batman.caminar();
+  batman.volar();
+
+  final lucas = Pato();
+  lucas.volar();
+  lucas.caminar();
+  lucas.nadar();
+} // Main
+
+
+  //Sigue implementando más animales.
+```
+
+### 5. Uso de Mixins en Flutter
+En Flutter, los mixins son útiles para compartir comportamientos comunes entre widgets o clases de lógica. Por ejemplo:
+
+ChangeNotifier : Es un mixin comúnmente usado en Flutter para gestionar el estado de la aplicación. Permite notificar a los widgets cuando cambia el estado.
+
+```dart
+import 'package:flutter/material.dart';
+
+class Counter with ChangeNotifier {
+  int _count = 0;
+
+  int get count => _count;
+
+  void increment() {
+    _count++;
+    notifyListeners(); // Notifica a los listeners sobre el cambio
+  }
+}
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("Ejemplo de Mixin")),
+        body: Center(
+          child: ChangeNotifierProvider(
+            create: (_) => Counter(),
+            child: ContadorWidget(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ContadorWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final counter = Provider.of<Counter>(context);
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text("Contador: ${counter.count}"),
+        ElevatedButton(
+          onPressed: () => counter.increment(),
+          child: Text("Incrementar"),
+        ),
+      ],
+    );
+  }
+}
+``` 

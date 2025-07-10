@@ -53,6 +53,14 @@ https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 ### 13. Clases
 [Clases](Codigo/Clases/Readme.md)
 
+>[NOTE]
+>A partir de este punto dejo el código en los readme.md de cada sección para que podáis seguir el curso de manera más facil y los ejercicios resueltos en los .dart dentro de la carpeta de cada sección ya que me dí cuenta que es más fácil de entender el código y no tener que ir a los .dart.
+
+### 13. Getters y Setters
+[Getters y Setters](Codigo/Getters_Setters/Readme.md)
+
+
+
 
 
 
