@@ -5,7 +5,7 @@ En Dart, las **funciones** son bloques de código reutilizables que realizan una
 ## 1. ¿Qué es una Función?
 Una función es un bloque de código que encapsula una tarea específica. Puede recibir parámetros (datos de entrada), realizar operaciones y devolver un resultado (opcional). Las funciones permiten escribir código modular, lo que facilita su mantenimiento y reutilización.
 
-```
+```dart
 void saludar() {
   print("¡Hola, mundo!");
 }
@@ -17,7 +17,7 @@ void main() {
 
 ## 2. Sintaxis de una Función
 La sintaxis básica de una función en Dart es:
-```
+```dart
 tipoRetorno nombreFuncion(parametro1, parametro2, ...) {
   // Código de la función
   return valor; // Opcional, dependiendo del tipo de retorno
@@ -34,7 +34,7 @@ tipoRetorno nombreFuncion(parametro1, parametro2, ...) {
 ### * Funciones sin Parámetros ni Retorno
 
 Estas funciones no reciben parámetros ni devuelven un valor. Se declaran con el tipo void.
-```
+```dart
 void imprimirMensaje() {
   print("Este es un mensaje simple.");
 }
@@ -48,7 +48,7 @@ void main() {
 
 ### * Funciones con Parámetros
 Las funciones pueden recibir uno o más parámetros para procesar datos específicos.
-```
+```dart
 void saludar(String nombre) {
   print("¡Hola, $nombre!");
 }
@@ -64,7 +64,7 @@ void main() {
 
 ### * Funciones con Retorno
 Si una función debe devolver un valor, se especifica el tipo de retorno y se usa la palabra clave return.
-```
+```dart
 int sumar(int a, int b) {
   return a + b;
 }
@@ -80,7 +80,7 @@ Dart ofrece varias formas de manejar parámetros en funciones:
 
 - a. Parámetros Obligatorios
 Los parámetros obligatorios deben ser proporcionados cuando se llama a la función.
-```
+```dart
 void mostrarNombreCompleto(String nombre, String apellido) {
   print("Nombre completo: $nombre $apellido");
 }
@@ -94,7 +94,7 @@ void main() {
 ```
 - b. Parámetros Opcionales
 Los parámetros opcionales se definen entre corchetes []. Si no se proporcionan, toman un valor predeterminado (null o el valor asignado).
-```
+```dart
 void saludar([String? nombre]) {
   if (nombre != null) {
     print("¡Hola, $nombre!");
@@ -114,7 +114,7 @@ void main() {
 
 - c. Parámetros Nombrados
 Los parámetros nombrados se definen entre llaves {}. Permiten pasar argumentos en cualquier orden.
-```
+```dart
 void mostrarInfo({String? nombre, int? edad}) {
   print("Nombre: $nombre, Edad: $edad");
 }
@@ -130,7 +130,7 @@ void main() {
 
 - d. Valores Predeterminados
 Puedes asignar valores predeterminados a los parámetros usando =.
-```
+```dart
 void saludar({String nombre = "Desconocido"}) {
   print("¡Hola, $nombre!");
 }
@@ -146,7 +146,7 @@ void main() {
 
 ### * Funciones anónimas.
 Las funciones anónimas son funciones sin nombre. Se utilizan comúnmente como callbacks o dentro de estructuras de control.
-```
+```dart
 void main() {
   var suma = (int a, int b) {
     return a + b;
@@ -160,7 +160,7 @@ void main() {
 
 ### * Arrow Functions (Funciones Flecha)
 Las funciones flecha (=>) son una forma abreviada de escribir funciones simples que tienen una sola expresión.
-```
+```dart
 int sumar(int a, int b) => a + b;
 
 void main() {
@@ -172,7 +172,7 @@ void main() {
 
 ### * Null Safety en Funciones
 Con la introducción de null safety , puedes asegurarte de que los parámetros y los valores de retorno no sean nulos accidentalmente
-```
+```dart
 String obtenerNombre(String? nombre) {
   return nombre ?? "Desconocido";
 }

@@ -7,7 +7,7 @@ En Dart, un Map es una colección de pares clave-valor. Es una estructura de dat
 
 Un Map es una colección que asocia claves únicas con sus respectivos valores . Las claves pueden ser de cualquier tipo (generalmente String, int, etc.), y los valores también pueden ser de cualquier tipo (incluyendo objetos, listas, otros maps, etc.).
 
-```
+```dart
 Map<String, int> edades = {
   "Juan": 25,
   "María": 30,
@@ -29,11 +29,11 @@ var productos = {
 
 - Constructor: Podemos usar el constructor Map() para crear un mapa vacío o con valores iniciales.
     - Map vacio:
-    ```
+    ```dart
     Map<String, dynamic> usuario = {};
     ```
     - Map con valores iniciales:
-    ```
+    ```dart
     Map<int, String> diasSemana = Map();
     diasSemana[1] = "Lunes";
     diasSemana[2] = "Martes";
@@ -42,31 +42,31 @@ var productos = {
 ### Acceder a los valores de un Map.
 
 Para acceder a un valor en un Map, usa la clave correspondiente dentro de corchetes [].
-```
+```dart
 print(pokemon["nombre"]); // Output: Pikachu
 ```
 
 ### Modificar un valor en un Map.
 
 - modificar el valor de un Map:
-```
+```dart
 // Ya existe el valor nombre = Pikachu y modificamos el valor de Pikachu a Raichu
 pokemon["nombre"] = "Raichu";
 ```
 - Añadir un nuevo valor en un Map:
-```
+```dart
 pokemon["Force"] = 100; // Ya que force no existe en el Map Pokemon.
 ```
 
 - Elinimar un Par Clave-Valor en un Map:
-```
+```dart
 // Eliminamos el valor de la clave "nombre" del Map Pokemon
 pokemon.remove("Force");
 ```
 
 ### Iterar sobre un Map.
 Podemos recorrer un Map para acceder a sus claves y valores usando un bucle for.
-```
+```dart
 capitales.forEach((clave, valor) {
   print("Clave: $clave, Valor: $valor");
 }); 
@@ -74,7 +74,7 @@ capitales.forEach((clave, valor) {
 
 ### Mapas anidados.
 Podemos crear mapas anidados para agrupar datos en estructuras más complejas.
-```
+```dart
 Map<String, Map<String, dynamic>> capitales = {
   "Brasilia": {"Pais": "Brasil", "Poblacion": 21400000},
   "Buenos Aires": {"Pais": "Argentina", "Poblacion": 3000000},
@@ -94,7 +94,7 @@ Dart proporciona varias propiedades útiles para trabajar con Map:
 - length : Devuelve el número de pares clave-valor.
 - isEmpty y isNotEmpty : Indican si el Map está vacío o no.
 
-```
+```dart
 print(capitales.keys);    // Salida: (Brasilia, Buenos Aires, Santiago, Bogotá, Lima)
 print(capitales.values);  // Salida: (Madrid, París, Lisboa)
 print(capitales.length);  // Salida: 3

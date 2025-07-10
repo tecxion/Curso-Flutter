@@ -11,7 +11,7 @@ Los operadores aritméticos permiten realizar operaciones matemáticas básicas 
 - Division (/)
 - Modulo (%)
 
-```
+```dart
 /*
 Ejemplo:
 Operador:  Descripción:      Ejemplo:      Resultado:
@@ -38,7 +38,7 @@ void main() {
 ## Operadores de Asignación
 Estos operadores se utilizan para asignar valores a variables. También existen operadores combinados para simplificar operaciones.
 
-```
+```dart
 /*
 Operador      Descripción                     Ejemplo        Equivalente
 =             Asignación                       x=5              x=5
@@ -64,7 +64,7 @@ void main() {
 ### Operadores de Comparación
 Estos operadores se utilizan para comparar valores y devolver un valor booleano (true o false).
 
-```
+```dart
 /*
 Operador          Descripción                  Ejemplo             Resultado
 ==                Igualdad                     5 == 5              true
@@ -83,11 +83,11 @@ void main() {
   print(a > b);  // Salida: true
   print(a <= b); // Salida: false
 }
-``` 
+```
 
 ###  Operadores Lógicos
 Estos operadores se utilizan para combinar expresiones lógicas y devolver un valor booleano (true o false).
-```
+```dart
 /*
 Operador        Descripción                  Ejemplo             Resultado
 &&              Y lógico                     true && false       false
@@ -107,7 +107,7 @@ void main() {
 
 ### Operadores de Identidad o de tipo
 Estos operadores se utilizan para comparar objetos y devolver un valor booleano (true o false).
-```
+```dart
 /*
 Operador        Descripción                  Ejemplo             Resultado
 is              Es instancia de             5 is int            true
@@ -128,7 +128,7 @@ void main() {
 ### Operadores condicionales
 Estos operadores se utilizan para realizar operaciones condicionales para simplificar la evaluación de condiciones.
 
-```
+```dart
 /*
 Operador        Descripción                  Ejemplo                Resultado
 ?              Operador condicional          x == 5 ? "Si" : "No"     "No"
@@ -151,7 +151,7 @@ void main() {
 
 ### Operadores de Incremento y Decremento
 Estos operadores se utilizan para incrementar o decrementar el valor de una variable en 1.
-```
+```dart
 /*
 Operador        Descripción                  Ejemplo                Resultado
 ++              Incremento                   x=4; x++                    5
