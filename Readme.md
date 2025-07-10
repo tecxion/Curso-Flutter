@@ -3,7 +3,7 @@
 ## Primero os voy a dejar todos los enlaces de interés para que os sirvan como guía para el proceso de instalación de Flutter y Dart en Windows, MacOS y Linux.
 
 
-## Índice del curso.
+## Índice del curso. :computer:
 
 
 ### 1. Instalación de Flutter
@@ -66,4 +66,4 @@ https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 
 #### Gran parte de la información obtenida ha sido gracias a Fernando Herrera de su canal de Youtube el cual podéis verlo para mejorar en el desarrollo de las aplicaciones con Flutter y Dart.
 
-[Canal de Fernando Herrera](https://www.youtube.com/@fernando_her85)
+:video_camera:[Canal de Fernando Herrera](https://www.youtube.com/@fernando_her85)
