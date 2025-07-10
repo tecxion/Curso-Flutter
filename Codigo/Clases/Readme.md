@@ -374,6 +374,7 @@ Composición sobre Herencia : Los mixins promueven el principio de "composición
 
 ### 4. Ejemplo:
 En el siguiente ejemplo está implementado a relación de esta web donde explican el mixin [Visitar mixin](https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3){:target="_blank"}.
+<a href="https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3" target="_blank">Visitar mixin</a>
 
 
 ```dart
