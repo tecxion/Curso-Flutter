@@ -18,7 +18,7 @@ https://flutter.dev/docs/get-started/test-drive
 Para comenzar con Flutter y dart empezaremos creando el programa básico de hello world.<br>
 En todo programa tendremos siempre un main() y un main.dart, que será donde se ejecutará el programa.<br>
 En el archivo main.dart, tendremos la siguiente estructura:
-```
+```dart
 import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
@@ -26,7 +26,7 @@ void main() {
 ```
 Pero para el primer ejemplo de Hello World, solo nos hará falta el método main(), que será el siguiente:
     
-```
+```dart
 void main() {
   print('Hello World');
   }
