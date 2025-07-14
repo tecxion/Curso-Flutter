@@ -293,7 +293,9 @@ ListView(
 ```
 
 >[!NOTE]
->En el siguiente enlace os dejo la página con el [https://docs.flutter.dev/ui/widgets](Widget Catalog)
+>En el siguiente enlace os dejo la página con el catalogo de widgets de Flutter. :point_down:
+
+[https://docs.flutter.dev/ui/widgets](Widgets Catalog)
 
 ### 🎨 Temas y Estilos
 Flutter permite aplicar temas globales a tu aplicación usando el widget Theme. Aquí tienes un ejemplo:
