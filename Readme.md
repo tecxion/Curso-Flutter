@@ -69,13 +69,243 @@ https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
 
 ## Pasamos a aplicaciones con Flutter
 
+lutter es un framework de desarrollo de interfaces de usuario (UI) creado por Google. Permite crear aplicaciones nativas para iOS, Android, Web, Windows, macOS y Linux desde una única base de código. Flutter utiliza el lenguaje de programación Dart , que es fácil de aprender y tiene características modernas como tipado estático, funciones asíncronas y una sintaxis clara.
 
 
+### A continuación explico los conceptos básicos de Flutter.
 
+#### 1. Widgets
+Los widgets son los componentes básicos de Flutter. Piensa en ellos como piezas de Lego que se combinan para construir la interfaz de usuario. Cada widget puede tener hijos (child) o múltiples hijos (children).
 
+- Tipos de Widgets:
+    - StatelessWidget : Un widget que no cambia su estado después de ser construido
+```dart
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text('¡Hola, Flutter!'),
+    );
+  }
+}
+```
+  - StatefulWidget : Un widget que puede cambiar su estado durante su ciclo de vida
+```dart
+class CounterApp extends StatefulWidget {
+  @override
+  _CounterAppState createState() => _CounterAppState();
+}
 
+class _CounterAppState extends State<CounterApp> {
+  int _counter = 0;
 
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
 
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text('Contador: $_counter'),
+        ElevatedButton(
+          onPressed: _incrementCounter,
+          child: Text('Incrementar'),
+        ),
+      ],
+    );
+  }
+}
+```
+
+#### 2. BuildContext
+El BuildContext es un objeto que representa la ubicación de un widget en el árbol de widgets. Es esencial para navegar entre pantallas, acceder al tema de la aplicación y manejar el estado.
+
+#### 3. Gestión de Estado
+El estado es la información que puede cambiar durante la ejecución de la aplicación. Flutter ofrece varias formas de manejar el estado:
+
+Provider : Recomendado para principiantes, es fácil de usar y robusto.
+Riverpod : Similar a Provider, pero más flexible y testeable.
+GetX : Un gestor de estado potente que también incluye navegación y temas.
+BLoC/Cubit : Ideal para aplicaciones complejas, aunque requiere más código.
+Ejemplo básico con Provider:
+
+```dart
+class Counter with ChangeNotifier {
+  int _count = 0;
+  int get count => _count;
+
+  void increment() {
+    _count++;
+    notifyListeners();
+  }
+}
+
+// En el widget principal:
+ChangeNotifierProvider(
+  create: (_) => Counter(),
+  child: MaterialApp(
+    home: CounterPage(),
+  ),
+);
+```
+
+#### 4. Navegación
+Flutter ofrece varias formas de navegar entre pantallas: 
+- La navegación entre pantallas se realiza utilizando el Navigator. Aquí tienes un ejemplo básico:
+```dart
+onPressed: () {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => SecondScreen()),
+  );
+}
+```
+
+🛠️ Widgets Comunes en Flutter
+Aquí tienes una lista de algunos widgets esenciales que deberías conocer:
+
+#### 1. AppBar
+- Una barra superior que muestra el título y acciones.
+
+```dart
+AppBar(
+  title: Text('Mi Aplicación'),
+  actions: [IconButton(icon: Icon(Icons.search), onPressed: () {})],
+)
+```
+
+#### 2. Text
+- Un widget de texto que muestra texto en pantalla.
+```dart
+Text(
+  '¡Hola, Flutter!',
+  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+)
+```
+#### 3. Container
+- Un widget versátil que permite agregar padding, margen y decoración.
+```dart
+Container(
+  padding: EdgeInsets.all(16.0),
+  color: Colors.blue,
+  child: Text('Contenedor'),
+)
+```
+#### 4. Column y Row
+- Organizan widgets en columnas y filas
+```dart
+Column(
+  children: [
+    Text('Texto 1'),
+    Text('Texto 2'),
+  ],
+),
+```
+
+#### 5. ListView
+- Muestra una lista desplazable de widgets.
+
+```dart
+ListView(
+  children: [
+    ListTile(title: Text('Elemento 1')),
+    ListTile(title: Text('Elemento 2')),
+  ],
+)
+```
+
+#### 6. ElevatedButton
+- Un botón que se puede presionar para realizar una acción.
+```dart
+ElevatedButton(
+  onPressed: () {
+    // Acción del botón
+  },
+  child: Text('Botón'),
+)
+```
+
+#### 7. TextField
+- Un widget para ingresar texto.
+```dart
+TextField(
+  decoration: InputDecoration(
+    hintText: 'Ingresa tu nombre',
+  ),
+)
+```
+
+#### 8. IconButton
+- Un widget que representa un icono y un botón.
+```dart
+IconButton(
+  icon: Icon(Icons.search),
+  onPressed: () {
+    // Acción del botón
+  },
+)
+```
+
+#### 9. Checkbox
+- Un widget para seleccionar una opción.
+```dart
+Checkbox(
+  value: isChecked,
+  onChanged: (value) {
+    setState(() {
+      isChecked = value;
+    });
+  },
+)
+```
+
+#### 10. RadioListTile
+- Un widget para seleccionar una opción de una lista de opciones.
+```dart
+RadioListTile(
+  value: 1,
+  groupValue: selectedOption,
+  onChanged: (value) {
+    setState(() {
+      selectedOption = value;
+    });
+  },
+  title: Text('Opción 1'),
+)
+```
+
+#### 11. ListView
+- Un widget para mostrar una lista de elementos.
+```dart
+ListView(
+  children: [
+    ListTile(
+      title: Text('Elemento 1'),
+    ),
+    ListTile(
+      title: Text('Elemento 2'),
+    ),
+  ],
+)
+```
+
+>[!NOTE]
+>En el siguiente enlace os dejo la página con el [https://docs.flutter.dev/ui/widgets](Widget Catalog)
+
+### 🎨 Temas y Estilos
+Flutter permite aplicar temas globales a tu aplicación usando el widget Theme. Aquí tienes un ejemplo:
+```dart
+MaterialApp(
+  theme: ThemeData(
+    primaryColor: Colors.blue,
+    fontFamily: 'Roboto',
+  ),
+  home: MyHomePage(),
+);
+```
 
 
 ---
