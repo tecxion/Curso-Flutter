@@ -291,15 +291,113 @@ ListView(
   ],
 )
 ```
+#### 12. GridView
+- Un widget para mostrar una cuadrícula de elementos.
+```
+GridView(
+  children: [
+    GridViewTile(
+      child: Container(
+        color: Colors.red,
+      ),
+    ),
+    GridViewTile(
+      child: Container(
+        color: Colors.green,
+      ),
+    ),
+  ],
+)
+```
+
+#### 13. ExpansionTile
+- Un widget para mostrar un elemento con subelementos.
+```dart
+ExpansionTile(
+  title: Text('Título'),
+  children: [
+    ListTile(
+      title: Text('Subelemento 1'),
+    ),
+    ListTile(
+      title: Text('Subelemento 2'),
+    ),
+  ],
+)
+```
+
+#### 14. SliverAppBar
+- Un widget para mostrar un AppBar en una lista de elementos.
+```dart
+SliverAppBar(
+  title: Text('Título'),
+  actions: [
+    IconButton(
+      icon: Icon(Icons.search),
+      onPressed: () {},
+    ),
+  ],
+)
+```
+
+#### 15. SliverPersistentHeader
+- Un widget para mostrar un header en una lista de elementos.
+```dart
+SliverPersistentHeader(
+  pinned: true,
+  flexibleSpace: Container(
+    color: Colors.blue,
+  ),
+)
+```
+
+#### 16. SliverGrid
+- Un widget para mostrar una lista de elementos en forma de cuadrícula.
+```dart
+SliverGrid(
+  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    crossAxisCount: 2,
+  ),
+  children: [
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.green,
+    ),
+    Container(
+      color: Colors.blue,
+    ),
+  ],
+)
+```
+
+#### 17. SliverList
+- Un widget para mostrar una lista de elementos en forma de lista.
+```dart
+SliverList(
+  children: [
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.green,
+    ),
+    Container(
+      color: Colors.blue,
+    ),
+  ],
+)
+```
+
+
 
 >[!NOTE]
 >En el siguiente enlace os dejo la página con el catalogo de widgets de Flutter. :point_down:
 
-<br>
+[Catálogo de widgets](https://docs.flutter.dev/ui/widgets)
 
-[https://docs.flutter.dev/ui/widgets](Catálogo de Widgets)
-
-
+---
 
 ### 🎨 Temas y Estilos
 Flutter permite aplicar temas globales a tu aplicación usando el widget Theme. Aquí tienes un ejemplo:
