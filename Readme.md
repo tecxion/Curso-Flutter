@@ -295,6 +295,7 @@ ListView(
 >[!NOTE]
 >En el siguiente enlace os dejo la página con el catalogo de widgets de Flutter. :point_down:
 
+<br>
 
 [https://docs.flutter.dev/ui/widgets](Catálogo de Widgets)
 
